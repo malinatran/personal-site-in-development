@@ -1,0 +1,224 @@
+@font-face {
+  font-family: Malina;
+  src: url('assets/Malina-Regular.otf') format('opentype');
+}
+
+html {
+  border: 0;
+}
+
+body {
+  border: 0;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+#nav-container {
+  list-style: none;
+}
+
+#nav-container li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.nav-links {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#name {
+  background: -webkit-linear-gradient(#3FB8AF, #7FC7AF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Malina';
+  font-size: 120px;
+}
+
+#heart {
+  color: #d65c5c;
+}
+
+.headline {
+  border-bottom: 5px solid #5CD6D6;
+  clear: both;
+  color: black;
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  margin: 10px auto;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+#about {
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  padding-left: 20px;
+  text-align: left;
+  max-width: 800px;
+}
+
+#about .spotlighted {
+  font-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#about a {
+  border-bottom: 2px solid #ffff99;
+  color: black;
+  text-decoration: none;
+}
+
+#about a:hover {
+  background-color: #ffff99;
+}
+
+#peace-sign {
+  font-size: 18px;
+}
+
+#portfolio {
+  display: inline-block;
+  width: 100%;
+}
+
+.row {
+  clear: both;
+  margin: auto;
+  max-width: 800px;
+  vertical-align: top;
+}
+
+.box {
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  margin: 10px auto;
+  text-align: center;
+  width: 390px;
+}
+
+img {
+  border: 1px solid black;
+  display: inline-block;
+  height: 200px;
+  margin-right: 10px;
+}
+
+.code-link, .code-link:visited {
+  border-bottom: 2px solid #ccffff;
+  color: black;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.code-link:hover {
+  background-color: #ccffff;
+}
+
+footer {
+  clear: both;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#social-media-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  margin: 0px auto 40px;
+  text-align: center;
+}
+
+#social-media-container a:link,
+#social-media-container a:visited,
+#social-media-container a:active {
+  color: black;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+#social-media-container a:hover {
+  color: #7FC7AF;
+}
+
+.social-icon {
+  background-position: center center;
+  background-size: cover;
+  border: none;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+}
+
+.social-icon:hover .social-text {
+  background-color: black;
+}
+
+.social-text {
+  /*display: none;*/
+}
+
+#twitter {
+  background-image: url('assets/twitter.png');
+}
+
+#instagram {
+  background-image: url('assets/twitter.png');
+}
+
+#linkedin {
+  background-image: url('assets/linkedin.png');
+}
+
+#github {
+  background-image: url('assets/github.png');
+}
+
+#medium {
+  background-image: url('assets/twitter.png');
+}
+
+#tumblr {
+  background-image: url('assets/tumblr.png');
+}
+
+
+@media (min-width: 816px) {
+/*  #about {
+    padding: 0;
+  }
+  .box {
+    float: left;
+  }*/
+}
