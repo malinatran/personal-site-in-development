@@ -1,22 +1,55 @@
+/*#800040 #cc0066*/
+
 @font-face {
   font-family: Malina;
   src: url('assets/Malina-Regular.otf') format('opentype');
 }
 
-html {
-  border: 0;
+html, body {
+  margin:0;
+  padding:0;
+  height:100%;
 }
 
-body {
-  border: 0;
-  overflow-x: hidden;
+a {
+  text-decoration: none;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+  padding: 5% 10% 0 10%;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+}
+
+#menu {
+  border: 1px solid grey;
+  display: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  padding: 5px 10px;
+  position: absolute;
+  right: 10%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#mobile-nav-container, #mobile-nav-container a {
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  list-style: none;
+  text-align: center;
+}
+
+.mobile-nav-links {
+  padding-top: 10px;
 }
 
 #nav-container {
@@ -25,27 +58,46 @@ header {
 
 #nav-container li {
   display: inline-block;
-  padding: 10px;
+  margin: 10px;
 }
 
 .nav-links {
-  font-family: 'Oswald', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.nav-links a {
+  color: black;
+}
+
+.mobile-nav-links a:hover, .nav-links a:hover {
+  color: #551a8b;
+  padding: 2.5px 0;
 }
 
 #name {
-  background: -webkit-linear-gradient(#3FB8AF, #7FC7AF);
+  background: -webkit-linear-gradient(#004040, #7fbfbf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Malina';
   font-size: 120px;
 }
 
+#last-name {
+  color: #7fbfbf;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: right;
+  margin-top: -14px;
+  padding: 5px 0;
+}
+
 #heart {
-  color: #d65c5c;
+  color: #cc0066;
 }
 
 .headline {
@@ -64,22 +116,21 @@ header {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   line-height: 1.5em;
-  padding-left: 20px;
   text-align: left;
-  max-width: 800px;
+  max-width: 600px;
+  padding: 20px 0;
 }
 
 #about .spotlighted {
   font-color: black;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 #about a {
   border-bottom: 2px solid #ffff99;
   color: black;
-  text-decoration: none;
 }
 
 #about a:hover {
@@ -107,8 +158,7 @@ header {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 13px;
   font-weight: 300;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  padding-bottom: 20px;
 }
 
 .text {
@@ -131,30 +181,60 @@ img {
   border-bottom: 2px solid #ccffff;
   color: black;
   font-style: italic;
-  text-decoration: none;
 }
 
 .code-link:hover {
   background-color: #ccffff;
 }
 
+#portfolio-page {
+  display: flex;
+}
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 10px;
+}
+
+#portfolio-text {
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  text-align: left;
+  max-width: 500px;
+  padding: 20px 0;
+}
+
+#portfolio-link a {
+  color: #551a8b;
+  border-top: 3px solid #ccbadc;
+  padding-top: 5px;
+}
+
 footer {
+  backgrond: #f9f9f9;
   clear: both;
+  display: block;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 12px;
   font-weight: 300;
-  margin-top: 50px;
-  padding-top: 50px;
   text-align: center;
+  width:100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
+/*
 #social-media-container {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  margin: 0px auto 40px;
   text-align: center;
 }
 
@@ -165,36 +245,35 @@ footer {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
-  text-decoration: none;
 }
 
 #social-media-container a:hover {
-  color: #7FC7AF;
+  color: #3FB8AF;
 }
 
 .social-icon {
   background-position: center center;
   background-size: cover;
   border: none;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin: 10px;
 }
-
-.social-icon:hover .social-text {
-  background-color: black;
+*/
+/*.social-icon:hover .social-text {
+  display: inline-block;
 }
 
 .social-text {
-  /*display: none;*/
-}
+  display: none;
+}*/
 
-#twitter {
-  background-image: url('assets/twitter.png');
+/*#twitter {
+  background-image: url('./assets/twitter.png');
 }
 
 #instagram {
-  background-image: url('assets/twitter.png');
+  background-image: url('assets/instagram.png');
 }
 
 #linkedin {
@@ -206,19 +285,61 @@ footer {
 }
 
 #medium {
-  background-image: url('assets/twitter.png');
+  background-image: url('assets/medium.png');
 }
 
 #tumblr {
   background-image: url('assets/tumblr.png');
+}*/
+
+#footer-text-container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  margin-top: 20px;
 }
 
-
 @media (min-width: 816px) {
+  body {
+    overflow-x: hidden;
+  }
 /*  #about {
     padding: 0;
   }
   .box {
     float: left;
   }*/
+}
+
+@media (max-width: 682px) {
+  #menu {
+    display: block;
+  }
+  #nav-container {
+    display: none;
+  }
+  #name-container {
+    margin: 20px auto 0 auto;
+  }
+}
+
+@media (max-width: 1004px) {
+  #portfolio {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1414px) {
+  #portfolio-page {
+    display: block;
+  }
+  #portfolio-text {
+    /*max-width: 600px;*/
+  }
+  #portfolio {
+    display: block;
+    padding: 0;
+  }
 }
