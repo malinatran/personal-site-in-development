@@ -1,55 +1,34 @@
-/*#800040 #cc0066*/
+/* Global */
 
 @font-face {
   font-family: Malina;
-  src: url('assets/Malina-Regular.otf') format('opentype');
+  src: url('../assets/Malina-Regular.otf') format('opentype');
 }
 
 html, body {
-  margin:0;
-  padding:0;
-  height:100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-a {
+a:hover, a:visited, a:link, a:active {
   text-decoration: none;
 }
 
 #wrapper {
+  display: block;
   min-height: 100%;
   position: relative;
-  padding: 5% 10% 0 10%;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.col-centered {
+  float: none;
+  margin: 0 auto;
 }
 
-#menu {
-  border: 1px solid grey;
-  display: none;
-  font-family: 'Oswald', sans-serif;
-  font-size: 18px;
-  padding: 5px 10px;
-  position: absolute;
-  right: 10%;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-#mobile-nav-container, #mobile-nav-container a {
-  color: black;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  list-style: none;
-  text-align: center;
-}
-
-.mobile-nav-links {
-  padding-top: 10px;
+.active {
+  content: '____';
+  font-family: 'Malina';
 }
 
 #nav-container {
@@ -65,35 +44,39 @@ header {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   font-weight: 300;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav-links::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #cc0066;
+  transition: width .3s;
+}
+
+.nav-links:hover::after {
+  width: 100%;
 }
 
 .nav-links a {
   color: black;
 }
 
-.mobile-nav-links a:hover, .nav-links a:hover {
-  color: #551a8b;
+.nav-links a:hover {
+  color: #cc0066;
   padding: 2.5px 0;
+  text-decoration: none;
 }
 
 #name {
-  background: -webkit-linear-gradient(#004040, #7fbfbf);
+  background: -webkit-linear-gradient(#00394c, #00bfff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Malina';
-  font-size: 120px;
-}
-
-#last-name {
-  color: #7fbfbf;
-  font-family: 'Oswald', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-align: right;
-  margin-top: -14px;
-  padding: 5px 0;
+  font-size: 140px;
 }
 
 #heart {
@@ -111,20 +94,19 @@ header {
   padding-bottom: 5px;
 }
 
-#about {
+#about, #email, #portfolio-about {
   color: black;
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.5em;
+  padding-bottom: 20px;
   text-align: left;
-  max-width: 600px;
-  padding: 20px 0;
 }
 
 #about .spotlighted {
   font-color: black;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
   font-weight: 400;
 }
 
@@ -135,23 +117,79 @@ header {
 
 #about a:hover {
   background-color: #ffff99;
+  text-decoration: none;
 }
 
-#peace-sign {
-  font-size: 18px;
+.social-media-icons {
+  text-align: center;
 }
 
-#portfolio {
-  display: inline-block;
-  width: 100%;
+.social-media-icons .fa {
+  font-size: 24px;
+  padding: 10px;
+  color: #249fcd;
 }
 
-.row {
+.social-media-icons .fa:hover {
+  color: #196f8f;
+}
+
+.main-layout {
   clear: both;
   margin: auto;
   max-width: 800px;
   vertical-align: top;
 }
+
+/* Portrait */
+
+#portrait {
+  background-image: url('../assets/malina-tran.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-left: 5px solid gold;
+  border-top: 5px solid gold;
+  height: 450px;
+  width: auto;
+}
+
+#circular-portrait {
+  background-image: url('../assets/malina-tran-thumbnail.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 5px solid gold;
+  border-radius: 50%;
+  height: 125px;
+  margin-bottom: 30px;
+  width: 125px;
+}
+
+.fa-envelope-o {
+  padding-right: 10px;
+}
+
+#echo-park {
+  background-image: url('../assets/echo-park.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-left: 5px solid gold;
+  border-top: 5px solid gold;
+  height: 400px;
+  width: 100%;
+}
+
+.echo-park-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  margin: 10px auto;
+  text-align: right;
+}
+
+/* Portfolio */
 
 .box {
   display: inline-block;
@@ -159,6 +197,10 @@ header {
   font-size: 13px;
   font-weight: 300;
   padding-bottom: 20px;
+}
+
+.app-image {
+  margin-left: 10px;
 }
 
 .text {
@@ -194,8 +236,8 @@ img {
 #portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 40px 10px;
+  justify-content: center;
+  width: 100%;
 }
 
 #portfolio-text {
@@ -204,8 +246,6 @@ img {
   font-weight: 300;
   line-height: 1.5em;
   text-align: left;
-  max-width: 500px;
-  padding: 20px 0;
 }
 
 #portfolio-link a {
@@ -214,132 +254,43 @@ img {
   padding-top: 5px;
 }
 
-footer {
-  backgrond: #f9f9f9;
-  clear: both;
-  display: block;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  text-align: center;
-  width:100%;
+.footer-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-/*
-#social-media-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer-text {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
   font-weight: 300;
   text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-#social-media-container a:link,
-#social-media-container a:visited,
-#social-media-container a:active {
-  color: black;
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#social-media-container a:hover {
-  color: #3FB8AF;
-}
-
-.social-icon {
-  background-position: center center;
-  background-size: cover;
-  border: none;
-  height: 25px;
-  width: 25px;
-  margin: 10px;
-}
-*/
-/*.social-icon:hover .social-text {
-  display: inline-block;
-}
-
-.social-text {
-  display: none;
-}*/
-
-/*#twitter {
-  background-image: url('./assets/twitter.png');
-}
-
-#instagram {
-  background-image: url('assets/instagram.png');
-}
-
-#linkedin {
-  background-image: url('assets/linkedin.png');
-}
-
-#github {
-  background-image: url('assets/github.png');
-}
-
-#medium {
-  background-image: url('assets/medium.png');
-}
-
-#tumblr {
-  background-image: url('assets/tumblr.png');
-}*/
-
-#footer-text-container {
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f9f9f9;
-  margin-top: 20px;
-}
-
-@media (min-width: 816px) {
-  body {
-    overflow-x: hidden;
-  }
-/*  #about {
-    padding: 0;
-  }
-  .box {
-    float: left;
-  }*/
-}
-
-@media (max-width: 682px) {
-  #menu {
-    display: block;
-  }
-  #nav-container {
-    display: none;
-  }
-  #name-container {
-    margin: 20px auto 0 auto;
+@media (min-width: 544px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
-@media (max-width: 1004px) {
-  #portfolio {
+@media (max-width: 544px) {
+  #email {
+    padding-top: 10px;
     text-align: center;
   }
-}
 
-@media (max-width: 1414px) {
-  #portfolio-page {
-    display: block;
-  }
-  #portfolio-text {
-    /*max-width: 600px;*/
-  }
-  #portfolio {
-    display: block;
-    padding: 0;
+  .nav-links {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
   }
 }
