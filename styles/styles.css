@@ -110,12 +110,12 @@ a:hover, a:visited, a:link, a:active {
   font-weight: 400;
 }
 
-#about a {
+#about a, #portfolio-about a {
   border-bottom: 2px solid #ffff99;
   color: black;
 }
 
-#about a:hover {
+#about a:hover, #portfolio-about a:hover {
   background-color: #ffff99;
   text-decoration: none;
 }
